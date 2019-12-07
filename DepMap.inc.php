@@ -90,7 +90,7 @@ echo $edges;
         edges: edges,
         stabilize: true
     };
-    var options =  <?php echo $config['network_map_vis_options']; ?>;
+    var options =  <?php echo isset($config['network_map_vis_options']) ? $config['network_map_vis_options'] : '{}'; ?>;
     var network = new vis.Network(container, data, options);
     network.on('click', function (properties) {
     });
